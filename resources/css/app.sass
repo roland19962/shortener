@@ -1,0 +1,141 @@
+.page-container
+    position: relative
+    min-height: calc(80vh - 136px)
+    @media screen and (max-width: 991px)
+        min-height: calc(80vh - 48px)
+
+.container
+    width: 1266px
+    max-width: 1266px
+    margin: 0 auto
+    @media screen and (max-width: 1365px)
+        width: 1024px
+        max-width: 1024px
+    @media screen and (max-width: 1200px)
+        width: 100%
+        max-width: 100%
+        padding-left: 100px
+        padding-right: 100px
+    @media screen and (max-width: 991px)
+        padding-right: 80px
+        padding-left: 80px
+    @media screen and (max-width: 767px)
+        padding-right: 40px
+        padding-left: 40px
+    @media screen and (max-width: 575px)
+        padding-right: 32px
+        padding-left: 32px
+    @media screen and (max-width: 359px)
+        padding-right: 12px
+        padding-left: 12px
+
+
+.mt-120
+    margin-top: 120px
+
+.mb-44
+    margin-bottom: 44px
+
+.mb-16
+    margin-bottom: 16px
+
+
+.shortener__container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    .title
+        font-size: 32px
+        font-weight: 700
+        line-height: 1.12
+    .form
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        .input-box
+            position: relative
+            background: #ffffff
+            transition: 0.2s ease-in
+
+            label, .load
+                position: absolute
+                top: 14px
+                left: 14px
+                z-index: 1
+                display: block
+                font-size: 14px
+                line-height: 20px
+                margin-bottom: 0
+                color: #A0A0A0
+                transition: 0.2s ease-in
+                background: #ffffff
+                padding: 0 2px
+
+            input:valid ~ label, label.load, .load
+                color: black
+            input:focus ~ label, input:active ~ label, input:valid ~ label,
+            textarea:focus ~ label, textarea:active ~ label, textarea:valid ~ label, input[disabled] ~ label, label.load, .load
+                font-size: 12px
+                line-height: 1
+                top: -5px
+                z-index: 2
+                &::placeholder
+                    color: #A0A0A0
+            input:focus ~ label, input:active ~ label,
+            textarea:focus ~ label, textarea:active ~ label
+                color: #97B758
+                &::placeholder
+                    color: #A0A0A0
+
+            input:focus, input:active
+                &::placeholder
+                    color: #A0A0A0
+            .invalid
+                animation: invalid 500ms linear
+                input
+                    border: 1px solid  #BF3E33
+                label
+                    color:  #BF3E33 !important
+        input
+            width: 100%
+            padding: 14px 16px
+            border-radius: 4px
+            position: relative
+            z-index: 2
+            background: transparent
+            font-size: 14px
+            line-height: 20px
+            transition: 0.4s ease-in
+            height: auto
+            border: 1px solid #A0A0A0
+            outline: none !important
+            box-shadow: none !important
+            @media screen and (max-width: 400px)
+                padding: 14px 45px 14px 16px
+
+            &:focus, &:active
+                border: 1px solid #97B758
+            &::placeholder
+                color: transparent
+        .button
+            display: block
+            background: transparent
+            padding: 10px 20px
+            width: 100px
+            position: relative
+            color: #242424
+            border: 2px solid #4f660d
+            cursor: pointer
+            border-radius: 4px
+            box-shadow: none
+            font-weight: 600
+            outline: none
+            transition: all .5s cubic-bezier(.55,.085,.68,.53)
+            white-space: nowrap
+            text-align: center
+            &:focus, &:active, &:hover
+                background: transparent
+                opacity: .6
