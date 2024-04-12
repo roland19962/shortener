@@ -5,7 +5,7 @@
 
         <form @submit.prevent class="form">
 
-            <div class="mb-16 container input-box">
+            <div class="mb-16 input-box">
                 <input
                     v-model.trim="v$.postData.url.$model"
                     autocomplete="off"
@@ -71,7 +71,6 @@
                     let url = '/api/url-alias/save';
                     axios.post(url, this.postData)
                         .then(response => {
-                            console.log(response);
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Success',
@@ -81,7 +80,6 @@
                         })
                         .catch(error => {
                             if (error.response && error.response.data && error.response.data.exception) {
-                                console.log(error.response.data.exception);
                                 Swal.fire({
                                     icon: 'error',
                                     title: error.response.status,

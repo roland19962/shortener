@@ -18,3 +18,5 @@ Route::get('/', [ HomeController::class, "indexAction" ]);
 
 Route::get('/{something}/{hash}', [ HomeController::class, "redirectSomethingHashAction" ]);
 Route::get('/{hash}', [ HomeController::class, "redirectHashAction" ]);
+
+Route::get('/{any?}', [ HomeController::class, "errorAction" ])->where('any', '.*');

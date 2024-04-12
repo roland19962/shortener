@@ -7,8 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        @vite(['resources/css/app.sass', 'resources/js/app.js'])
-
+        @vite(['resources/sass/app.sass', 'resources/js/app.js'])
 
         <title itemprop="headline">shortener</title>
         <meta itemprop="description" name="description" content="">

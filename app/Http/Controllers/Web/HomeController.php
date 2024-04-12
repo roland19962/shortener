@@ -12,6 +12,10 @@ class HomeController extends Controller
         return view('index');
     }
 
+    public function errorAction() {
+        return view('error');
+    }
+
     public function redirectHashAction($hash) {
 
         $currentHash = htmlspecialchars(trim($hash));
